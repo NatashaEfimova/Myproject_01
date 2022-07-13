@@ -28,8 +28,9 @@ public class TestStrateg {
 
          WebElement element = wd.findElement(By.className("login_login__3EHKB"));
 
-         // активные кнопки
-         element = wd.findElement(By.cssSelector(".active"));
+         // активная кнопка
+         element =  wd.findElement(By.cssSelector(".active"));
+
 
          // посчитать сколько полей для ввода
 
@@ -39,7 +40,7 @@ public class TestStrateg {
 
          //этот тест НЕ работает потому что я плоха в Джаве, но есть вопрос:
          // Предположим, что на огромной километровой странице с кучей элементов и контента мне надо найти из всех кнопок на странице элемент, который именно кнопка и именно регистрация. Как?
-      //   element = wd.findElement(By.tagName("button") .cssSelector("[href$='rat']"));
+       // element = wd.findElement(By.tagName("button") .cssSelector("[href$='rat']"));
 
      }
      @AfterMethod
