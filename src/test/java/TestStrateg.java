@@ -28,19 +28,27 @@ public class TestStrateg {
 
          WebElement element = wd.findElement(By.className("login_login__3EHKB"));
 
+         element = wd.findElement(By.xpath("//div[@class='login_login__3EHKB']"));
+
+         element = wd.findElement(By.xpath("//div[@class='login_login__3EHKB']"));
+         element = wd.findElement(By.xpath("//*[@class='login_login__3EHKB']"));
+
          // активная кнопка
          element =  wd.findElement(By.cssSelector(".active"));
 
+         // для этой задачи xPath в данном случае НЕ подходит, так как задача была найти АКТИВНУЮ кнопку, а не кнопку Логин, но пусть будет так:
+         element = wd.findElement(By.xpath("(//a[normalize-space()='LOGIN'])[1]"));
+
+
 
          // посчитать сколько полей для ввода
+         // для этой задачи xPath в данном случае НЕ подходит, потому что он находит только конкретный элемент?
 
          List<WebElement> elements = wd.findElements(By.tagName("input"));
          System.out.println(elements.size());
 
 
-         //этот тест НЕ работает потому что я плоха в Джаве, но есть вопрос:
-         // Предположим, что на огромной километровой странице с кучей элементов и контента мне надо найти из всех кнопок на странице элемент, который именно кнопка и именно регистрация. Как?
-       // element = wd.findElement(By.tagName("button") .cssSelector("[href$='rat']"));
+
 
      }
      @AfterMethod
